@@ -10,6 +10,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "tsConfig": "tsconfig.app.json",
             "outputPath": "dist/web",
             "index": "src/index.html",
             "main": "src/main.ts",
