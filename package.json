@@ -1,0 +1,22 @@
+{
+  "name": "datalens",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "dev": "tsx tools/scripts/check-mcp.ts && concurrently -k -n PROXY,WEB -c cyan,green \"pnpm --filter apps/mcp-proxy dev\" \"pnpm --filter apps/web start\"",
+    "dev:proxy": "pnpm --filter apps/mcp-proxy dev",
+    "dev:web": "pnpm --filter apps/web start",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "@types/node": "^20.14.10",
+    "tsx": "^4.16.2",
+    "typescript": "^5.6.3"
+  }
+}
