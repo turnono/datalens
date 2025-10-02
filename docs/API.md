@@ -31,6 +31,8 @@ X-RateLimit-Remaining: 95
 X-RateLimit-Reset: 1640995200
 ```
 
+**Note**: Rate limiting is currently disabled for development testing but will be enabled in production.
+
 ## Endpoints
 
 ### Health Check
@@ -72,25 +74,25 @@ Content-Type: application/json
 - `q` (string, required): Natural language query
 - `mode` (string, optional): Query mode - `"exploratory"`, `"analytical"`, or `"generative"`
 
+**Supported Countries**: USA, Germany, South Africa, China, Japan, Brazil, India, UK, France, Canada, Australia
+
 **Response:**
 
 ```json
 {
   "answer": {
-    "title": "Population Variables Found",
-    "note": "Found 10 population-related variables for South Africa. Main variable: Total population",
-    "unit": null,
-    "value": 10
+    "title": "Total population - South Africa",
+    "note": "Population data. Latest value: 64,007,187.",
+    "unit": "people",
+    "value": 64007187
   },
   "chart": {
     "type": "line",
     "series": [
       {
-        "label": "Total Population",
+        "label": "Total population",
         "points": [
-          { "x": "2000", "y": 45000000 },
-          { "x": "2001", "y": 45500000 },
-          { "x": "2002", "y": 46000000 }
+          { "x": "2024", "y": 64007187 }
         ]
       }
     ]

@@ -44,7 +44,7 @@ cp .env.example .env
 
 # Start MCP server (required)
 export DC_API_KEY="your-api-key"
-datacommons-mcp serve http --host 0.0.0.0 --port 8077
+/opt/anaconda3/bin/datacommons-mcp serve http --host 0.0.0.0 --port 8077
 ```
 
 ### 2. Development Commands
@@ -68,6 +68,11 @@ pnpm test:golden
 
 # Lint code
 pnpm lint
+
+# Test API endpoints
+curl -X POST http://localhost:8787/api/query \
+  -H 'Content-Type: application/json' \
+  -d '{"q":"usa population","mode":"analytical"}'
 ```
 
 ### 3. Code Organization

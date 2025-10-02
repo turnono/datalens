@@ -12,6 +12,10 @@ pnpm install
 cp .env.example .env
 # Edit .env with your API keys and Firebase configuration
 
+# Start MCP server (required)
+export DC_API_KEY="your-api-key"
+/opt/anaconda3/bin/datacommons-mcp serve http --host 0.0.0.0 --port 8077
+
 # Start all services
 pnpm dev
 ```
@@ -43,6 +47,8 @@ Comprehensive documentation is available in the [`docs/`](docs/) folder:
 ## 🎯 Features
 
 - **Natural Language Queries**: Ask questions about public data in plain English
+- **Dynamic Country Detection**: Automatically detects countries from queries (USA, Germany, South Africa, etc.)
+- **Real-time Data**: Fetches actual population data from Data Commons (e.g., USA: 340M, Germany: 83M)
 - **Interactive Charts**: Visualize data with line and bar charts
 - **User Authentication**: Firebase Auth with email/password
 - **Query History**: Save and revisit previous queries

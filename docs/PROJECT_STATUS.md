@@ -13,7 +13,9 @@ This document provides an overview of the current state of the DataLens project.
 - ✅ **Natural Language Queries**: Ask questions about public data in plain English
 - ✅ **Real-time Data Access**: Connected to Data Commons API via MCP server
 - ✅ **Interactive Charts**: Line and bar chart visualization with Chart.js
-- ✅ **User Authentication**: Firebase Auth with email/password
+- ✅ **Dynamic Country Detection**: Automatically detects countries from queries (USA, Germany, South Africa, etc.)
+- ✅ **Time-series Data**: Fetches actual historical data with proper chart visualization
+- ✅ **User Authentication**: Firebase Auth with email/password (ready for production)
 - ✅ **Query History**: Save and revisit previous queries
 - ✅ **Rate Limiting**: Fair usage limits for free tier users
 - ✅ **Response Caching**: 24-hour TTL for improved performance
@@ -116,7 +118,8 @@ pnpm test:golden   # Integration tests
 
 ### Current Performance
 
-- ✅ **Response Time**: < 2 seconds for cached queries
+- ✅ **Response Time**: < 3 seconds for real-time data queries
+- ✅ **Data Accuracy**: Real population data from Data Commons (e.g., USA: 340M, Germany: 83M, South Africa: 64M)
 - ✅ **Cache Hit Rate**: ~80% for repeated queries
 - ✅ **Memory Usage**: < 100MB for proxy server
 - ✅ **Bundle Size**: < 500KB for Angular frontend

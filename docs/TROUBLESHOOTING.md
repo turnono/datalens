@@ -14,6 +14,11 @@ curl http://127.0.0.1:8077/           # MCP Server
 
 # Check processes
 ps aux | grep -E "(tsx|ng|datacommons-mcp)"
+
+# Test API functionality
+curl -X POST http://localhost:8787/api/query \
+  -H 'Content-Type: application/json' \
+  -d '{"q":"usa population","mode":"analytical"}'
 ```
 
 ### Check Logs
@@ -27,6 +32,12 @@ ps aux | grep -E "(tsx|ng|datacommons-mcp)"
 
 # MCP server logs
 # Look for error messages in the terminal where you ran `datacommons-mcp`
+
+# Test MCP server directly
+curl -X POST http://127.0.0.1:8077/mcp \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json, text/event-stream' \
+  -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"search_indicators","arguments":{"query":"population","places":["United States"],"include_topics":false}},"id":"test123"}'
 ```
 
 ## 🔧 Common Issues
@@ -48,6 +59,10 @@ ps aux | grep datacommons-mcp
 
 # Check if port 8077 is in use
 lsof -i :8077
+
+# Start MCP server with full path
+export DC_API_KEY="your-api-key"
+/opt/anaconda3/bin/datacommons-mcp serve http --host 0.0.0.0 --port 8077
 
 # Restart MCP server
 export DC_API_KEY="your-api-key"
