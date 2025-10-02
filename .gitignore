@@ -10,3 +10,6 @@ coverage/
 *.local
 pnpm-lock.yaml
 
+# Angular build cache
+apps/web/.angular/
+

@@ -1,6 +1,6 @@
 import { bootstrapApplication } from "@angular/platform-browser";
 import { provideHttpClient, withFetch } from "@angular/common/http";
-import { provideRouter, Routes, canActivate } from "@angular/router";
+import { provideRouter, Routes } from "@angular/router";
 import { AppComponent } from "./app/app.component";
 import { importProvidersFrom } from "@angular/core";
 import { provideAnimations } from "@angular/platform-browser/animations";

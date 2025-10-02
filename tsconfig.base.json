@@ -12,11 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "noEmitOnError": true,
     "baseUrl": ".",
-    "types": ["node"],
-    "paths": {
-      "@datalens/shared": ["packages/shared/src/index.ts"],
-      "@datalens/shared/*": ["packages/shared/src/*"]
-    }
+    "types": ["node"]
   },
   "include": ["apps", "packages", "tools", "infra"],
   "exclude": ["**/dist", "**/node_modules"]

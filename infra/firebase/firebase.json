@@ -10,5 +10,10 @@
   "functions": {
     "source": "functions",
     "runtime": "nodejs20"
+  },
+  "emulators": {
+    "firestore": {
+      "port": 8081
+    }
   }
 }

@@ -113,9 +113,9 @@ export class QueryPageComponent {
       backgroundColor: "transparent",
     }));
     this.chart?.destroy();
-    this.chart = new Chart(canvas.getContext("2d")!, {
+    this.chart = new Chart(canvas.getContext("2d") as any, {
       type: r.chart.type,
-      data: { datasets },
+      data: { datasets } as any,
       options: { responsive: true, parsing: false },
     });
   }

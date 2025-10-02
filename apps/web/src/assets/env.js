@@ -1,0 +1,8 @@
+window.env = {
+  FIREBASE_PROJECT_ID: "dtlens",
+  FIREBASE_WEB_API_KEY: "AIzaSyBGhSaIKy60DqijDaz2UOwsp-1Z5R9RqzI",
+  FIREBASE_AUTH_DOMAIN: "dtlens.firebaseapp.com",
+  FIREBASE_APP_ID: "1:1021279640555:web:4733f7ed748c6abb1417ae",
+  FIREBASE_STORAGE_BUCKET: "dtlens.firebasestorage.app",
+  FIREBASE_MEASUREMENT_ID: "G-2ZB2828SMD",
+};

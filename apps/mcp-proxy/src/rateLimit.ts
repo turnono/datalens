@@ -10,8 +10,13 @@ const FREE_TIER_LIMIT = 10; // per month
 
 function ensureFirebase() {
   if (!getApps().length) {
-    const projectId = process.env.FIREBASE_PROJECT_ID;
-    if (
+    const projectId = process.env.FIREBASE_PROJECT_ID || "demo-datalens";
+
+    // Configure for emulator if FIRESTORE_EMULATOR_HOST is set
+    if (process.env.FIRESTORE_EMULATOR_HOST) {
+      initializeApp({ projectId });
+      // The emulator host is already set in process.env
+    } else if (
       process.env.GOOGLE_APPLICATION_CREDENTIALS ||
       process.env.FIREBASE_CONFIG
     ) {

@@ -12,8 +12,7 @@ import {
 function getEnv(key: string) {
   return (
     (globalThis as any).env?.[key] ||
-    (import.meta as any).env?.[key] ||
-    (process as any)?.env?.[key]
+    (typeof process !== "undefined" ? (process as any)?.env?.[key] : undefined)
   );
 }
 

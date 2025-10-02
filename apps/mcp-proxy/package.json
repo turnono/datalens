@@ -12,15 +12,16 @@
     "lint": "echo 'no linter configured'"
   },
   "dependencies": {
+    "@datalens/shared": "workspace:^",
     "@fastify/cors": "^10.0.1",
-    "fastify": "^5.0.0",
     "dotenv": "^16.4.5",
+    "fastify": "^5.0.0",
     "firebase-admin": "^12.6.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5.6.3",
     "tsx": "^4.16.2",
+    "typescript": "^5.6.3",
     "vitest": "^2.0.5"
   }
 }
