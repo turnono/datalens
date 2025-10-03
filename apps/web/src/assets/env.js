@@ -5,4 +5,5 @@ window.env = {
   FIREBASE_APP_ID: "1:1097993922903:web:a62c1da2610894aa63f612",
   FIREBASE_STORAGE_BUCKET: "tjr-datalens.firebasestorage.app",
   FIREBASE_MEASUREMENT_ID: "G-2M5TC77R2P",
+  API_BASE_URL: "https://api-hpy3rqf52q-uc.a.run.app",
 };

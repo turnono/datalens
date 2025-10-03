@@ -13,3 +13,6 @@ pnpm-lock.yaml
 # Angular build cache
 apps/web/.angular/
 
+# Firebase build cache
+infra/firebase/public/
+infra/firebase/.firebase/
